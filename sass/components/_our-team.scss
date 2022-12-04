@@ -9,14 +9,14 @@
     }
 
     &__list {
-        display: flex;
+        display: block;
         padding: 0;
         margin-top: 0;
         margin-bottom: 0;
     }
    
     &__list-item {
-        display: inline-block;
+        display: block;
         align-items: baseline;
         margin-left: 0;
         margin-right: 0;
@@ -26,7 +26,10 @@
         border-bottom-right-radius: 4px;
         border-bottom-left-radius: 4px;
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.12));
-        margin-left: 30px;
+        margin-bottom: 30px;
+        &:last-child {
+            margin-bottom: 0;
+        }
         &:first-child {
             margin-left: 0;
         }
@@ -94,6 +97,45 @@
     &__icon {
         fill: currentColor;
     }
+
+    @media screen and (min-width:768px) and (max-width:1199px) {
+        
+        &__list-item {
+            display: inline-block;
+            padding: 0;
+            margin: 0;
+            margin-bottom: 30px;
+            width: calc((100% - 34px) / 2);
+
+            &:nth-child(2n + 2) {
+                    margin-left: 30px;
+                    
+            }
+        
+            &:nth-last-child(-n + 2) {
+                margin-bottom: 0;
+            }
+
+        }
+        
+    }
+
+    @media screen and (min-width:1200px) {
+      
+         &__list {
+            display: flex;
+        }
+        
+        &__list-item {
+            display: inline-block;
+            margin-right: 30px;
+            margin-bottom: 0;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+        
+    }
   }
   
  
@@ -102,4 +144,5 @@
  
   
  
+  
   

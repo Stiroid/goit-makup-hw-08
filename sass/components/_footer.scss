@@ -1,6 +1,7 @@
 .footer {
-    padding-top: 60px;
+    
     padding-bottom: 60px;
+    padding-top: 60px;
     font-size: 14px;
     line-height: 1.71;
     background-color: $hero-background-color;
@@ -8,22 +9,30 @@
   
   .inside {
     display: flex;
-    align-items: baseline;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   }
 
   .information {
-    margin-right: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 60px;
+
+   
 
     &__logo {
+        
         font-weight: 700;
         color: $accent-text-color;
         font-family: raleway, sans-serif;
         font-size: 26px;
         line-height: 1.17;
         letter-spacing: 0.03em;
-        padding-top: 60px;
-        margin-right: 0;
         padding-bottom: 0;
+        
     }
 
     &__logo-item {
@@ -58,6 +67,7 @@
         margin-top: 10px;
         margin-bottom: 0;
         padding-left: 0;
+        text-align: center;
     }
 
     &__list-item {
@@ -87,18 +97,23 @@
  
   
 .join {
-    align-items: baseline;
-    justify-content: baseline;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 60px;
 
     &__title {
         font-weight: 700;
         line-height: 1.14;
         color: $hero-text-color;
         margin-bottom: 20px;
+        text-align: center;
     }  
     
     &__list {
         display: flex;
+        
     }
 
     &__list-item {
@@ -136,10 +151,16 @@
         width: 20px;
         height: 20px;
     }
+
+   
   }
   
 .subscribe {
-    margin-left: 93px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 
     &__title {
         color: $hero-text-color;
@@ -152,8 +173,13 @@
     }
 
     &__input {
-        width: 358px;
+        display: block;
+        width: 100%;
+        max-width: 450px;
         height: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
         background-color: $hero-background-color;
         color: #fff;
         border: 1px solid rgba(255, 255, 255, 0.3);
@@ -166,14 +192,18 @@
         }
     }
 
+    &__form {
+        align-items: center;
+        width: 100%;
+    }
+
     &__button {
-        display: inline-flex;
+        display: flex;
         align-items: center;
         justify-content: center;
-        margin-top: 0;
+        margin: 0 auto;
         padding: 10px 28px;
         height: 50px;
-        margin-left: 10px;
         border: none;
         border-radius: 4px;
         color: $hero-text-color;
@@ -183,13 +213,115 @@
     &__icon {
         margin-left: 10px;
     }
-  }
-  
- 
-  
- 
-  
+
+}
+
+@media screen and (min-width:768px) and (max-width:1199px) {
+    .inside {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: baseline;
+        padding-top: 60px;
+      }
+      .information {
+        width: auto;
+        margin-bottom: unset;
+        
+        
+        &__logo {
+            padding-top: 0;
+        }
+      }
+    
+      .join {
+        width: auto;
+       margin-bottom: unset;
+        
+      }
+      .subscribe {
+        margin-top: 60px;
+      }
+    
+}
 
 
-  
- 
+@media screen and (min-width:1200px) {
+    .footer {
+        padding-top: 60px;
+      }
+      
+      .inside {
+       justify-content: unset;
+        align-items: baseline;
+        flex-direction: unset;
+      }
+    
+      .information {
+        margin-right: 70px;
+        flex-direction: unset;
+        display: unset;
+        justify-content: unset;
+        align-items: unset;
+        margin-bottom: 0;
+
+    
+        &__logo {
+            margin-right: 0;
+        }
+    
+        &__list {
+           text-align: unset;
+        }
+      }
+      
+     
+      
+    .join {
+        display: unset;
+        flex-direction: unset;
+        align-items: baseline;
+        justify-content: baseline;
+        margin-bottom: 0;
+        
+        &__title {
+            text-align: unset;
+        }  
+      }
+      
+    .subscribe {
+        margin-left: 93px;
+        display: unset;
+        flex-direction: unset;
+        justify-content: unset;
+        align-items: unset;
+        width: unset;
+
+        &__input {
+            display: unset;
+            width: 358px;
+            max-width: unset;
+            margin-left: unset;
+            margin-right: unset;
+            margin-bottom: 0;
+        }
+    
+        &__button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 0;
+            margin-left: 10px;
+            margin-right: 0;
+            margin-bottom: 0;
+            padding: 10px 28px;
+        }
+      }
+    }
+
+
+
+
+
+
+

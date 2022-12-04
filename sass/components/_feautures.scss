@@ -1,24 +1,21 @@
 .feautures {
     &__list {
-        display: flex;
-        padding-left: 0;
-        padding-right: 0;
+        display: block;
+        padding:0 15;
         margin: 0;
     }
    
     &__list-item {
-        display: inline-block;
-        width: calc((100% - 90px) / 4);
-        padding-left: 0px;
-        margin-left: 30px;
-        &:first-child {
-            margin-left: 0;
+        display: block;
+        margin-top: 0;
+        margin-bottom: 30px;
+        &:last-child {
+            margin-bottom: 0;
         }
     }
 
     &__logo {
         display: flex;
-        width: 270px;
         height: 120px;
         margin-bottom: 30px;
         background-color: #f5f4fa;
@@ -28,7 +25,7 @@
     &__icon {
         display: flex;
         margin: auto;
-        width: 70px;
+        width: 65px;
         height: 70px;
         align-items: center;
         justify-content: center;
@@ -40,6 +37,7 @@
         color: $title-text-color;
         letter-spacing: 0.03em;
         text-transform: uppercase;
+        text-align: center;
         margin-top: 0;
         margin-bottom: 10px;
     }
@@ -49,6 +47,71 @@
         font-size: 14px;
         line-height: 1.71;
         letter-spacing: 0.03em;
+        text-align: center;
+        align-items: center;
+    }
+
+    @media screen and (min-width:768px) and (max-width:1199px) {
+        
+        &__list {
+            display: inline-block;
+            margin-left: 0;
+            
+        }
+
+        &__list-item {
+            width: calc((100% - 34px) / 2);
+            display: inline-block;
+            align-items: center;
+            justify-content: space-between;
+            &:nth-child(2n+2) {
+                margin-left: 30px;
+                margin-right: 0;
+            }
+
+            &:nth-last-child(-n + 2) {
+                margin-bottom: 0;
+            }
+        }
+
+        &__text {
+            width: 370px;
+            margin-right: auto;
+            text-align: start;
+        }
+
+        &__title {
+            text-align: start;
+        }
+    }
+
+    @media screen and (min-width:1200px) {
+        &__list {
+            display: flex;
+            padding-left: 0;
+            padding-right: 0;
+           
+        }
+        
+        &__list-item {
+            display: inline-block;
+            width: calc((100% - 90px) / 4);
+            padding-left: 0px;
+            margin-left: 30px;
+            margin-bottom: 0;  
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+        
+        &__logo {
+            width: 270px;
+            height: 120px;
+        }
+        
+        &__icon {
+           width: 70px;
+        }
     }
   }
   
@@ -58,3 +121,4 @@
   
 
 
+  
