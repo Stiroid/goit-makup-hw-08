@@ -59,6 +59,11 @@
 
     @media screen and (min-width:768px) and (max-width:1199px) {
        
+        &__title {
+            font-size: 28px;
+            padding-bottom: 30px;
+        }
+
         &__list-item{
             max-width: 226px;
             width: calc((100% - 30px) / 3);

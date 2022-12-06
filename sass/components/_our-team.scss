@@ -100,6 +100,11 @@
 
     @media screen and (min-width:768px) and (max-width:1199px) {
         
+        &__title {
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+
         &__list-item {
             display: inline-block;
             padding: 0;
