@@ -39,6 +39,7 @@
         text-transform: uppercase;
         margin-top: 0;
         margin-bottom: 10px;
+        text-align: center;
     }
 
     &__text {
@@ -100,6 +101,10 @@
             &:first-child {
                 margin-left: 0;
             }
+        }
+
+        &__title {
+            text-align: unset;
         }
         
         &__logo {

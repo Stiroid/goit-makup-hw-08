@@ -189,6 +189,10 @@
       display: flex;
       margin-left: auto;
     }
+
+    @media screen and (min-width:1200px) {
+      margin-left: 93px;
+    }
     
     &__nav-list {
       display: flex;
@@ -262,7 +266,7 @@
     }
    
     @media screen and (min-width:1200px) {
-      margin-left: auto;
+      margin-left: 340px;
       margin-right: 0;
       padding: 0;
       flex-direction: unset;
